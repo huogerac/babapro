@@ -1,6 +1,9 @@
 <template>
   <div class="about">
     <v-row>
+      <v-col cols="12">
+        <app-version></app-version>
+      </v-col>
       <v-col cols="1">
         <v-menu
           ref="menu1"
@@ -76,6 +79,8 @@
 </template>
 
 <script>
+import AppVersion from '@/components/AppVersion.vue'
+
 export default {
   data: () => ({
     timeStart: null,
@@ -83,5 +88,9 @@ export default {
     showTimeStart: false,
     showTimeEnd: false,
   }),
+
+  components: {
+    AppVersion,
+  },
 }
 </script>
